@@ -4,6 +4,8 @@ import './App.css';
 import SignUp from "./SignUp";
 import Chatter from "./Chatter";
 import ReactDOM from "react-dom";
+import { ApolloProvider } from 'react-apollo';
+import { client } from './apollo';
 
 function App() {
   function signUp() {
@@ -13,6 +15,7 @@ function App() {
     ReactDOM.render(< Chatter/>, document.getElementById('root'));
   }
   return (
+    <ApolloProvider client={client}>
     <div className="App">
       <header className="App-header">
         <img src={pug} className="App-logo" alt="logo" />
@@ -44,6 +47,7 @@ function App() {
         </div>
       </header>
     </div>
+    </ApolloProvider>
   );
 }
 

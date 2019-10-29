@@ -3,12 +3,13 @@ import pug from './pug.png';
 import './SignUp.css';
 import ConfirmEm from "./ConfirmEm";
 import ReactDOM from "react-dom";
+import queries from './utils/queries';
 
 function SignUp() {
     function confirmEM() {
         ReactDOM.render(< ConfirmEm/>, document.getElementById('root'));
     }
-    return (
+    return (       
         <header className="SP-header">
             <div className="container">
                 <div className="row">
@@ -42,6 +43,7 @@ function SignUp() {
                 </div>
             </div>
         </header>
+     
     );
 }
 
